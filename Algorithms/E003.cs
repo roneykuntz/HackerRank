@@ -8,7 +8,7 @@ namespace Algorithms
         //A Very Big Sum
         //https://www.hackerrank.com/challenges/a-very-big-sum/problem
 
-        public static void Entrada()
+        public static void Input()
         {
             Random rand = new Random();
 

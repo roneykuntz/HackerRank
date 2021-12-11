@@ -8,7 +8,7 @@ namespace Algorithms
         //CompareTheTriplets
         //https://www.hackerrank.com/challenges/compare-the-triplets/problem
 
-        public static void Entrada()
+        public static void Input()
         {
             Random rand = new Random();
 

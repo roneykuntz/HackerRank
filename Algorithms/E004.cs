@@ -8,16 +8,8 @@ namespace Algorithms
         //Diagonal Difference
         //https://www.hackerrank.com/challenges/diagonal-difference/problem
 
-        public static void Entrada()
+        public static void Input()
         {
-
-            // ENTRADAS
-            // Inteiro n para definir o tamanho da matriz quadrada (linhas e colunas)
-            // List<List<int n>> lista de n linhas, cada linha com n elementos
-
-            // RESTRIÇÕES
-            // -100 => item >= +100
-
             Random rand = new Random();
             var tamanhoMatriz = rand.Next(2, 10);
             Console.WriteLine("tamanhoMatriz: " + tamanhoMatriz);

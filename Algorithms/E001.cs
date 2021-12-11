@@ -8,7 +8,7 @@ namespace Algorithms
         //SolveMeFirst
         //https://www.hackerrank.com/challenges/solve-me-first/problem
 
-        public static void Entrada()
+        public static void Input()
         {
             Random rand = new Random();
 
