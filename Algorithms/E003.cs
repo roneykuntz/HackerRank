@@ -5,7 +5,7 @@ namespace Algorithms
 {
     class E003
     {
-        //AVeryBigSum
+        //A Very Big Sum
         //https://www.hackerrank.com/challenges/a-very-big-sum/problem
 
         public static void Entrada()
