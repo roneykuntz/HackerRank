@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Algorithms
 {
@@ -24,14 +25,47 @@ namespace Algorithms
 
         public static void Input()
         {
+            Random rand = new Random();
+            int sizeOfCollection = rand.Next(3, 21);
+            Console.WriteLine("Size of the collection: " + sizeOfCollection);
 
+            List<int> numbersList = new(sizeOfCollection);
+            for(int i=0; i<sizeOfCollection; i++)
+            {
+                numbersList.Add(rand.Next(-100, 100));
+            }
+
+            Console.WriteLine("Numbers list: " + string.Join(",",numbersList));
+
+            PlusMinus(numbersList);
         }
 
-
-        public static void PlusMinus(List<int> arr)
+        public static void PlusMinus(List<int> numbersList)
         {
+            int positiveValues = 0;
+            int negativeValues = 0;
+            int zeros = 0;
+
+            foreach(int item in numbersList)
+            {
+                if (item > 0)
+                {
+                    positiveValues++;
+                }
+                else if (item < 0)
+                {
+                    negativeValues++;
+                }
+                else
+                {
+                    zeros++;
+                }
+            }
+
+            Console.WriteLine("Positives proportion: {0:0.000000}", ((double)positiveValues / (double)numbersList.Count));
+            Console.WriteLine("Negatives proportion: {0:0.000000}", ((double)negativeValues / (double)numbersList.Count));
+            Console.WriteLine("Zeros proportion: {0:0.000000}", ((double)zeros / (double)numbersList.Count));
 
         }
-
     }
 }
