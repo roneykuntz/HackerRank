@@ -40,11 +40,38 @@ namespace Algorithms
             long min = itensList.Min();
             long max = itensList.Max();
 
-            Console.WriteLine("Min/max: "+min.ToString() + " " + max.ToString());
+            //Console.WriteLine("Min/max: "+min.ToString() + " " + max.ToString());
 
-            long sum = itensList.Sum();
-            long maxSum = sum - min;
-            long minSum = sum - max;
+
+            long maxSum = 0;
+            long minSum = 0;
+            long equalSum = 0;
+
+            if (min != max)
+            {
+                for (int i = 0; i < itensList.Count; i++)
+                {
+               
+                    if (itensList[i] != min)
+                        maxSum += itensList[i];
+                    if (itensList[i] != max)
+                        minSum += itensList[i];
+                }
+            }
+            else
+            {
+                // in cases where the array has totally equal items, like [5,5,5,5,5]
+
+                for (int i = 0; i < itensList.Count; i++)
+                {
+                    equalSum += itensList[i];
+                }
+
+                maxSum = equalSum - min;
+                minSum = equalSum - max;
+
+            }
+            
 
             Console.WriteLine(minSum.ToString()+" "+maxSum.ToString());
 
