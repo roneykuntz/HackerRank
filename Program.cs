@@ -7,7 +7,7 @@ namespace HackerRank
         static void Main(string[] args)
         {
             // Write the topic and exercise number here.
-            Algorithms.E010.Input();
+            Algorithms.E011.Input();
         }
     }
 }
